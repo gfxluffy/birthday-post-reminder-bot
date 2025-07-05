@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: birthday-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_SERVER_ID
+        sync: false
+      - key: DISCORD_CHANNEL_ID
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_JSON
+        sync: false
+
+
