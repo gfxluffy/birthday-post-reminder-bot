@@ -9,8 +9,8 @@ import json
 
 manila_tz = pytz.timezone('Asia/Manila')
 
-# from keep_alive import keep_alive
-# keep_alive()  # This starts the Flask web server
+from keep_alive import keep_alive
+keep_alive()  # This starts the Flask web server
 
 # from dotenv import load_dotenv
 # load_dotenv()
