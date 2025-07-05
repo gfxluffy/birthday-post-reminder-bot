@@ -10,16 +10,17 @@ import json
 manila_tz = pytz.timezone('Asia/Manila')
 
 # from keep_alive import keep_alive
-
 # keep_alive()  # This starts the Flask web server
+
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # === CONFIG ===
 SHEET_NAME = 'LD Volunteer Birthdays'
-# JSON_KEYFILE = 'service_account.json'
-GOOGLE_CREDS_JSON = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
-CHANNEL_ID = int(os.getenv['DISCORD_CHANNEL_ID'])  # Replace with your channel ID
-GUILD_ID = int(os.getenv['DISCORD_SERVER_ID'])  # Replace with your server ID
-TOKEN = os.getenv['DISCORD_TOKEN']  # Set in Replit secrets
+GOOGLE_CREDS_JSON = os.getenv('GOOGLE_SERVICE_ACCOUNT_JSON')
+CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))  # Replace with your channel ID
+GUILD_ID = int(os.getenv('DISCORD_SERVER_ID'))  # Replace with your server ID
+TOKEN = os.getenv('DISCORD_TOKEN')  # Set in Replit secrets
 
 # === Google Sheets Setup ===
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
